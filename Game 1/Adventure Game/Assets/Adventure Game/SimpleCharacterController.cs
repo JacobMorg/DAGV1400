@@ -64,4 +64,5 @@ public class SimpleCharacterController : MonoBehaviour
         currentPosition.z = 0f;
         thisTransform.position = currentPosition;
     }
+    
 }
