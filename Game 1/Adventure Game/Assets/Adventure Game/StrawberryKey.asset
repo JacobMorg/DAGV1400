@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad1666b98d9ccc4baa248aaa10f2031, type: 3}
-  m_Name: HealthData
+  m_Script: {fileID: 11500000, guid: 26c3b1301ba0c9b49833c0e80cb9a1bd, type: 3}
+  m_Name: StrawberryKey
   m_EditorClassIdentifier: 
-  value: 1
