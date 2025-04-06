@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class ColliderDestroyer : MonoBehaviour
 {
-    private Collider myCollider;
+    public GameObject KeyObject;
+    public GameObject trap;
+    private BoxCollider trapCollider;
 
-    void start()
+    void Start()
     {
-        myCollider = GetComponent<Collider>();
+        trapCollider = trap.GetComponent<BoxCollider>();
     }
 
-    public void Destroyer(GameObject gameObject)
+    public void DestroyKey()
     {
-        Destroy(myCollider);
+        //destroys key
+        Destroy(KeyObject);
+
+        if (trapCollider != null) //checks to see if the collider is active
+        {
+            trapCollider.enabled = false; //Disable collider to stop damage
+        }
     }
+
+
 }

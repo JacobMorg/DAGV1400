@@ -7,7 +7,12 @@ public class SimpleIDMatchBehaviour : MonoBehaviour
 {
     public Id id;
     public UnityEvent matchEvent, noMatchEvent;
+    private ColliderDestroyer ColliderDestroyerScript;
 
+    void Start()
+    {
+        ColliderDestroyerScript = GetComponent<ColliderDestroyer>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         var otherID = other.GetComponent<SimpleIDBehaviour>();
@@ -16,6 +21,7 @@ public class SimpleIDMatchBehaviour : MonoBehaviour
         {
             matchEvent.Invoke();
             Debug.Log("Matched ID: " + id);
+            ColliderDestroyerScript.DestroyKey();
         }
         else
         {
