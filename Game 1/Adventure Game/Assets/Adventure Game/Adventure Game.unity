@@ -1215,10 +1215,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 392312459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ce1140128a0e7a448c412693c64aafb, type: 3}
+  m_Script: {fileID: 11500000, guid: c47ed3b26f96bbc43ac03f1c5716faeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1158523175}
+  waypoints:
+  - {fileID: 1158523175}
+  - {fileID: 615541508}
 --- !u!95 &461917432 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3473110147931890920, guid: 8967bc76bccd41f4dba8375c8b80f3a2, type: 3}
@@ -1361,6 +1363,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2468855519620916943, guid: 9b3f414a15922b34a9b26efd3f27a15f, type: 3}
   m_PrefabInstance: {fileID: 488479393}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &615541507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 615541508}
+  m_Layer: 0
+  m_Name: Waypoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &615541508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615541507}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.66, y: -0.99, z: -0.61605823}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &664419120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2108,7 +2141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1158523175}
   m_Layer: 0
-  m_Name: TargetPoint
+  m_Name: Waypoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8910,3 +8943,4 @@ SceneRoots:
   - {fileID: 1673318453}
   - {fileID: 392312463}
   - {fileID: 1158523175}
+  - {fileID: 615541508}
