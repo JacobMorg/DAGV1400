@@ -11,9 +11,25 @@ public class SimpleTriggerEventBehaviour : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        // Trigger the event and test with a debug message
-        triggerEvent.Invoke();
-        Debug.Log("Player interacted with the object!");
+        if (other.gameObject.tag == "Player")
+        {
+            // Trigger the event and test with a debug message
+            triggerEvent.Invoke();
+            Debug.Log("Player interacted with the object!");
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            staminaEvent.Invoke();
+            Debug.Log("Player tried to jump!");
+        }
+    }
+    private void banana()
+    {
+        Destroy(gameObject);
     }
 
     private void Update()
