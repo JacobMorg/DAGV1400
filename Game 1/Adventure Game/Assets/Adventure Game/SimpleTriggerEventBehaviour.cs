@@ -27,8 +27,4 @@ public class SimpleTriggerEventBehaviour : MonoBehaviour
             Debug.Log("Player tried to jump!");
         }
     }
-    private void banana()
-    {
-        Destroy(gameObject);
-    }
 }
