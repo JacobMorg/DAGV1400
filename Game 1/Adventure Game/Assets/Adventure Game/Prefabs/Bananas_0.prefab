@@ -13,6 +13,11 @@ GameObject:
   - component: {fileID: 3473110147931890920}
   - component: {fileID: 2454994063279039839}
   - component: {fileID: 1690084847487562180}
+<<<<<<< HEAD
+  m_Layer: 0
+  m_Name: Bananas_0
+  m_TagString: Untagged
+=======
   - component: {fileID: 2185414175091697010}
   - component: {fileID: 4886987877014471545}
   - component: {fileID: 5821237632462968214}
@@ -21,6 +26,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bananas_0
   m_TagString: Banana
+>>>>>>> origin/main
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,6 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEvent:
     m_PersistentCalls:
+<<<<<<< HEAD
+      m_Calls: []
+  staminaEvent:
+    m_PersistentCalls:
+      m_Calls: []
+=======
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SimpleIntData, Assembly-CSharp
@@ -5109,3 +5121,4 @@ MonoBehaviour:
   secondEmissionAmount: 20
   thirdEmissionAmount: 30
   delayBetweenEmissions: 0.5
+>>>>>>> origin/main
