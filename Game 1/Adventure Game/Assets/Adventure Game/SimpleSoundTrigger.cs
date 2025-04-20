@@ -14,6 +14,9 @@ public class SimpleSoundTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        audioSource.Play();
+        if (other.gameObject.tag == "Player")
+        {
+            audioSource.Play();
+        }
     }
 }

@@ -17,16 +17,19 @@ public class SimpleIDMatchBehaviour : MonoBehaviour
     {
         var otherID = other.GetComponent<SimpleIDBehaviour>();
 
-        if (otherID.id == id)
+        if (otherID != null)
         {
-            matchEvent.Invoke();
-            Debug.Log("Matched ID: " + id);
-            ColliderDestroyerScript.DestroyKey();
-        }
-        else
-        {
-            noMatchEvent.Invoke();
-            Debug.Log("No Match: " + id);
+            if (otherID.id == id)
+            {
+                matchEvent.Invoke();
+                Debug.Log("Matched ID: " + id);
+                ColliderDestroyerScript.DestroyKey();
+            }
+            else
+            {
+                noMatchEvent.Invoke();
+                Debug.Log("No Match: " + id);
+            }
         }
     }
 }
