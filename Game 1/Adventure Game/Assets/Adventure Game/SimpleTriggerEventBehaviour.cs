@@ -27,20 +27,4 @@ public class SimpleTriggerEventBehaviour : MonoBehaviour
             Debug.Log("Player tried to jump!");
         }
     }
-<<<<<<< HEAD
-    private void banana()
-    {
-        Destroy(gameObject);
-    }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            staminaEvent.Invoke();
-            Debug.Log("Player tried to jump!");
-        }
-    }
-=======
->>>>>>> origin/main
 }
