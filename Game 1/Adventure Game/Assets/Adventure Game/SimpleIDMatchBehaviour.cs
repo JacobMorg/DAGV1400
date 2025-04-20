@@ -8,10 +8,12 @@ public class SimpleIDMatchBehaviour : MonoBehaviour
     public Id id;
     public UnityEvent matchEvent, noMatchEvent;
     private ColliderDestroyer ColliderDestroyerScript;
+    private SimpleDoorOpener SimpleDoorOpenerScript;
 
     void Start()
     {
         ColliderDestroyerScript = GetComponent<ColliderDestroyer>();
+        SimpleDoorOpenerScript = GetComponent<SimpleDoorOpener>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -23,7 +25,15 @@ public class SimpleIDMatchBehaviour : MonoBehaviour
             {
                 matchEvent.Invoke();
                 Debug.Log("Matched ID: " + id);
-                ColliderDestroyerScript.DestroyKey();
+                if (ColliderDestroyerScript != null)
+                {
+                    ColliderDestroyerScript.DestroyKey();
+                }
+
+                if (SimpleDoorOpenerScript != null)
+                {
+                    SimpleDoorOpenerScript.OpenDoor();
+                }
             }
             else
             {

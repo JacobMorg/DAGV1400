@@ -18,13 +18,4 @@ public class SimpleTriggerEventBehaviour : MonoBehaviour
             Debug.Log("Player interacted with the object!");
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            staminaEvent.Invoke();
-            Debug.Log("Player tried to jump!");
-        }
-    }
 }
