@@ -12,4 +12,3 @@ public class TransformController : MonoBehaviour
         transform.position = p;
     }
 }
-

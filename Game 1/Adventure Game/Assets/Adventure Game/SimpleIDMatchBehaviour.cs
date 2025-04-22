@@ -24,7 +24,7 @@ public class SimpleIDMatchBehaviour : MonoBehaviour
             if (otherID.id == id)
             {
                 matchEvent.Invoke();
-                Debug.Log("Matched ID: " + id);
+                //Debug.Log("Matched ID: " + id);
                 if (ColliderDestroyerScript != null)
                 {
                     ColliderDestroyerScript.DestroyKey();
@@ -38,7 +38,7 @@ public class SimpleIDMatchBehaviour : MonoBehaviour
             else
             {
                 noMatchEvent.Invoke();
-                Debug.Log("No Match: " + id);
+                //Debug.Log("No Match: " + id);
             }
         }
     }

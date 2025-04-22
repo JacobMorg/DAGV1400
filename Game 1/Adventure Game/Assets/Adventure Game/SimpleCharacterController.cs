@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 
@@ -15,6 +15,7 @@ public class SimpleCharacterController : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity;
     private Transform thisTransform;
+    
     
     private void Start()
     {
@@ -33,6 +34,8 @@ public class SimpleCharacterController : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
         }
+
+        QuitGame();
     }
 
     private void MoveCharacter()
@@ -63,6 +66,14 @@ public class SimpleCharacterController : MonoBehaviour
         var currentPosition = thisTransform.position;
         currentPosition.z = 0f;
         thisTransform.position = currentPosition;
+    }
+
+    public void QuitGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
     
 }
